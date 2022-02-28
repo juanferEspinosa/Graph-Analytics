@@ -3,7 +3,7 @@
 The purpose of this repository is to replicate several Graph algorithms to perform classification and make a comparison in performance. 
 
 1. Simple MLP: 2 Fully Connected layer.
-2. GCN: State-of-the-art paper "Semi-Supervised Classification with Graph Convolutional Networks" by Kipf and Welling [1](https://arxiv.org/abs/1609.02907). GCNs perform convolutions by making use of both the signal and the graph structure by taking into account the adjacency matrix. It also normalize the latter by using the so called "Re-normalization trick". The formula is: A = D^(-1/2)AD^(-1/2) with A also considering its self loops.
+2. GCN: State-of-the-art paper "Semi-Supervised Classification with Graph Convolutional Networks" by Kipf and Welling [1](https://arxiv.org/abs/1609.02907). GCNs perform convolutions by making use of both the signal and the graph structure by taking into account the adjacency matrix. It also normalize the latter by using the so called "Re-normalization trick". The formula is: A = D^(-1/2)AD^(-1/2) with A also considering its self loops. Code based on Jackie Loong explanation [5](https://github.com/dragen1860)
 
 3. GfNN: Evaluates performance of the study "Revisiting Graph Neural Networks: All We Have is Low-Pass Filters" by Hoang NT, et al [2](https://arxiv.org/abs/1905.09550). Validates why a Vanilla GCN is in effect a low-pass filter and explains why re-using the adjacency matrix during training is not optimal. Hence, GfNN performs feature augmentation, mixing the graph structure with the signal before training, making the model faster and accurate.
 
